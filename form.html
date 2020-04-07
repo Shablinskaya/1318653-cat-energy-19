@@ -6,13 +6,13 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-          <div class="logo">
+      <div class="header__container container">
+          <div class="header__logo logo">
             <a class="logo__link" href="#">
               <img class="logo__img" src="https://via.placeholder.com/150x150" alt="">
             </a>
           </div>
-          <nav class="menu">
+          <nav class="header__menu menu">
             <button class="menu__toggle-btn"></button>
           </nav>
       </div>
@@ -45,16 +45,16 @@
         </ul>
         <div class="form__body__contacts contacts">
           <h2 class="contacts__title">Контактные данные (владельца кота)</h2>
-          <div class="contacts__mail">
+          <div class="contacts__mail mail">
             <label for="mail">E-mail:*</label>
-            <input class="contacts__mail__field" id="mail" type="email" name="mail" value="kuklachev@gmail.com" required>
-            <button class="contacts__mail__icon icon" type="button">
+            <input class="mail__field" id="mail" type="email" name="mail" value="kuklachev@gmail.com" required>
+            <button class="ail__icon icon icon--envelope" type="button">
            </button>
           </div>
-          <div class="contacts__ tel">
+          <div class="contacts__ tel tel">
             <label for="tel">Телефон:*</label>
-            <input class="contacts__tel__field" id="tel" type="tel" name="tel" value="8 (960) 900-60-90" required>
-            <button class="contacts__tel__icon icon" type="button">
+            <input class="tel__field" id="tel" type="tel" name="tel" value="8 (960) 900-60-90" required>
+            <button class="tel__icon icon--phone" type="button">
             </button>
           </div>
         </div>
@@ -85,6 +85,13 @@
         <p class="form__body__description">* — Обязательные поля</p>
       </form>
     </main>
+    <section class="adress">
+      <div class="adress__map"></div>
+      <div class="adress__description description">
+        <span class="description__title">приглашаем к сотрудничеству дилеров!</span>
+        <p class="description__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      </div>
+    </section>
     <footer class="footer">
       <div class="footer__logo logo-footer">
         <a class="logo-footer__link" href="#">
