@@ -1,0 +1,30 @@
+@mainFont-color: #111111;
+@formFont-color: #222222;
+@PplaceholderFont-color: #444444;
+@contrastFont-color: #ffffff;
+@general-color: #68b738;
+@block-color: #f2f2f2;
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: @block-color;
+  align-items: center;
+}
+
+
+.social__link span{
+  font-size: 0;
+}
+
+.social__icon path {
+  fill: #666666;
+ &:hover {
+  fill: @general-color;
+}
+ &:active {
+   fill: @formFont-color;
+ }
+}
+
