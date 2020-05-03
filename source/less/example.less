@@ -1,44 +1,104 @@
-@block-color: #f2f2f2;
-@mainFont-color: #111111;
-
 .example {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: @block-color;
+  background-color: @bg-block;
 }
 
-.example__title {
-  margin-bottom: 33px;
-  text-align: left;
+.example__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 33px;
 }
 
 .example__description {
-  margin-bottom: 27px;
-  text-align: left;
-}
-
-.example__data {
-  display: flex;
-  justify-content: space-between;
-}
-
-.data__kg,
-.data__date {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+   margin-top: 33px;
+   width: 217px;
 }
 
 .example__cost {
-  color: @mainFont-color;
+  font-family: "Oswald";
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 22px;
+  color: @font-title;
 }
 
-.before-after__variant {
-  color: @mainFont-color;
+@media (min-width: @tablet-width) {
+  .example {
+    background-color: @bg-color;
+    border-top: 1px solid #f2f2f2;
+  }
+
+  .example__wrapper {
+    width: 708px;
+    margin: 0 auto;
+    padding-top: 51px;
+  }
+
+  .example__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .example__description {
+    margin-top: 60px;
+    width: 676px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+ .example__cost {
+   text-align: right;
+   margin-top: 69px;
+   color: @font-title;
+   font-size: 20px;
+   line-height: 20px;
+   width: 194px;
+   margin-left: auto;
+  }
+
+  .example__container {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
-.before-after__container {
-  display: flex;
-  justify-content: space-between;
+@media (min-width: @desktop-width) {
+
+  .example {
+    background-color: @bg-color;
+    border-top: none;
+    display: flex;
+  }
+
+  .example__wrapper {
+    width: 1210px;
+    padding-top: 90px;
+  }
+
+
+  .example__description {
+    padding-top: 76px;
+    width: 430px;
+    margin: 0;
+  }
+
+  .example__cost {
+    text-align: center;
+    margin-top: 48px;
+    width: 430px;
+    margin: 0;
+    margin-top: 48px;
+   }
+
+   .example__container {
+     flex-direction: column;
+   }
+
+   .example__box {
+     width: 760px;
+     background-color: @bg-block;
+   }
+
+
 }

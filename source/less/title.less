@@ -1,0 +1,44 @@
+.title {
+  color: @font-title;
+  font-size: 24px;
+  line-height: 24px;
+  position: relative;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #f2f2f2;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 44px;
+    height: 3px;
+    background-color: @general-color;
+    top: 15px;
+    right: -20px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .title {
+    position: absolute;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0;
+    border-bottom: none;
+    background-color: @bg-color;
+    padding-left: 38px;
+    padding-right: 49px;
+    top: -28px;
+    left: 28px;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .title {
+    top: -28px;
+    left: 110px;
+  }
+}

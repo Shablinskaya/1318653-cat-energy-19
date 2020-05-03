@@ -1,8 +1,26 @@
-
 .programms {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 197px;
+}
+
+@media (min-width: @tablet-width) {
+  .programms {
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programms {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 80px;
+    width: 1210px;
+    margin: 0 auto;
+  }
+
 }
 
