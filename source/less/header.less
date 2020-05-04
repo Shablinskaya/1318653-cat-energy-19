@@ -1,0 +1,160 @@
+.header__container {
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 1px #f2f2f2;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 65px;
+  position: relative;
+  align-items: center;
+}
+
+.header__toggle-btn {
+  position: relative;
+  width: 25px;
+  height: 19px;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+
+}
+
+.header__container--closed .header__toggle-btn::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 25px;
+  height: 2px;
+  background-color: #222222;
+  box-shadow: 0 8px 0 0 #222222, 0 16px 0 0 #222222;
+}
+
+.header__container--opened .header__toggle-btn {
+  top: 0;
+  right: auto;
+  left: 0;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 9px;
+    left: 8px;
+
+    width: 19px;
+    height: 2px;
+
+    background-color: #222222;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (max-width: @mobile-width-only) {
+  .header__container--closed .site-list__item {
+    display: none;
+  }
+
+  .header__container--nojs .header__toggle-btn {
+    display: none;
+  }
+
+  .header__container--nojs .menu__container {
+    position: static;
+    min-height: 0;
+  }
+
+  .header__container--nojss .site-list__item {
+    display: block;
+  }
+
+  .header__container--nojs .site-list__item--active a {
+    color: rgba(17, 17, 17, 0.3)
+  }
+}
+
+@media (min-width: @tablet-width) {
+
+  .header__menu {
+    width: 438px;
+    margin: 0;
+  }
+
+  .header__container {
+    display: flex;
+    flex-direction: row;
+    width: 709px;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    border-bottom: none;
+
+  }
+
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding: 0;
+  }
+
+  .header__toggle-btn {
+    display: none;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+
+  .header__menu {
+    width: 409px;
+  }
+
+  .header__container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-between;
+    position: relative;
+    width: 1210px;
+    z-index: 1;
+ }
+
+  .header__wrapper {
+    display: flex;
+    height: auto;
+    padding: 0;
+  }
+
+  .header__toggle-btn {
+    display: none;
+  }
+
+}
+

@@ -1,0 +1,95 @@
+.data {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 27px;
+}
+
+.data div {
+  text-align: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 3%;
+  position: relative;
+  width: 124px;
+}
+
+.data__info {
+  font-family: "Oswald";
+  color: @font-title;
+  font-size: 24px;
+  line-height: 24px;
+  padding-top: 17px;
+}
+
+.data__weight {
+  font-size: 0px;
+  line-height: 0px;
+}
+
+.data__weight::before {
+  position: absolute;
+  content: "снижение веса";
+  font-size: 12px;
+  line-height: 12px;
+  width: 57px;
+  top: 49px;
+  left: 28px;
+  padding: 3px;
+  background-color: @bg-block;
+  color: #444444;
+}
+
+.data__date {
+  font-size: 0px;
+  line-height: 0px;
+}
+
+.data__date::before {
+  position: absolute;
+  content: "затрачено времени";
+  font-size: 12px;
+  line-height: 12px;
+  width: 57px;
+  top: 49px;
+  left: 29px;
+  padding: 3px;
+  background-color: @bg-block;
+  color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+  .data {
+    width: 367px;
+    margin-top: 56px;
+  }
+
+  .data div {
+    width: 162px;
+  }
+
+  .data__info {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .data__weight::before {
+    font-size: 14px;
+    line-height: 14px;
+    width: 97px;
+    top: 59px;
+    left: 34px;
+    padding: 3px;
+    background-color: @bg-color;
+  }
+
+  .data__date::before {
+    font-size: 14px;
+    line-height: 14px;
+    width: 110px;
+    top: 63px;
+    left: 24px;
+    background-color: @bg-color;
+  }
+
+
+
+}
