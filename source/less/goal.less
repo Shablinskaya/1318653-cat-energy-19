@@ -9,6 +9,7 @@
 .goal__check {
   margin-bottom: 27px;
   position: relative;
+  padding-left: 22px;
 
   &:last-child {
     margin: 0;
@@ -21,6 +22,7 @@
     line-height: 18px;
     text-transform: uppercase;
     color: #222222;
+    cursor: pointer;
 
     &::before {
       position: absolute;
@@ -32,22 +34,27 @@
       left: 0;
       top: -5px;
     }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 12px;
+      height: 12px;
+      border: 1px solid @general-color;
+      background-color: @general-color;
+      border-radius: 50%;
+      left: 9px;
+      top: 4px;
+      opacity: 0;
+    }
   }
 
-  & input:checked + label::before {
-    content: "";
-    width: 12px;
-    height: 12px;
-    border: 1px solid @general-color;
-    border-radius: 50%;
-    background-color: @general-color;
-    top: 5px;
-    left: 8px;
+  & input:checked + label::after {
+    opacity: 1;
   }
-
 }
 
-.goal__check input[type='checkbox'] {
+.goal__check input[type='radio'] {
   display: none;
 }
 
@@ -61,6 +68,7 @@
   }
 
   .goal__check {
+    padding: 0;
     margin-bottom: 35px;
 
     & label {
@@ -74,13 +82,41 @@
         left: 0;
         top: -5px;
       }
+
+      &::after {
+        width: 18px;
+        height: 18px;
+        left: 11px;
+        top: 6px;
+      }
     }
 
-    & input:checked + label::before {
-      width: 18px;
-      height: 18px;
-      top: 5px;
-      left: 12px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .goal {
+    padding: 0;
+    padding-top: 36px;
+    padding-bottom: 33px;
+    padding-left: 28px;
+    width: 570px;
+  }
+
+  .goal__check {
+    padding: 0;
+    margin-bottom: 33px;
+    position: relative;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    & label {
+      padding-left: 60px;
+      font-size: 20px;
+      line-height: 20px;
+
     }
 
   }

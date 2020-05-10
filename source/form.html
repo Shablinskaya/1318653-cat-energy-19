@@ -19,10 +19,10 @@
           <div class="menu__container">
             <ul class="menu__list menu__list--catalog site-list">
               <li class="site-list__item">
-                <a href="#">Главная</a>
+                <a href="../source/index.html">Главная</a>
               </li>
               <li class="site-list__item">
-                <a href="#">Каталог продукции</a>
+                <a href="../source/catalog.html">Каталог продукции</a>
               </li>
               <li class="site-list__item site-list__item--active">
                 <a href="#">Подбор программы</a>
@@ -69,59 +69,63 @@
           </div>
           <ul class="form__body-goal goal">
             <li class="goal__check">
-              <input type="checkbox" id="slimming" name="slimming" checked>
+              <input type="radio" id="slimming" name="goal" checked>
               <label for="slimming">Похудение</label>
             </li>
             <li class="goal__check">
-              <input type="checkbox" id="mass" name="mass">
+              <input type="radio" id="mass" name="goal">
               <label for="mass">Набор массы</label>
             </li>
             <li class="goal__check">
-              <input type="checkbox" id="advice" name="advice">
+              <input type="radio" id="advice" name="goal">
               <label for="advice">Не знаю (Нужен ваш совет)</label>
             </li>
           </ul>
         </div>
         <div class="form__body-contacts contacts">
           <h2 class="contacts__title title">Контактные данные (владельца кота)</h2>
-          <div class="contacts__mail mail">
-            <label for="mail">E-mail:*</label>
-            <input class="mail__field" id="mail" type="email" name="mail" value="kuklachev@gmail.com" required>
-            <button class="ail__icon icon icon--envelope" type="button">
-           </button>
-          </div>
-          <div class="contacts__tel tel">
-            <label for="tel">Телефон:*</label>
-            <input class="tel__field" id="tel" type="tel" name="tel" value="8 (960) 900-60-90" required>
-            <button class="tel__icon  icon icon--phone" type="button">
-            </button>
+          <div class="contacts__wrapper">
+            <div class="contacts__field field">
+              <label for="mail">E-mail:*</label>
+              <input class="field__space field__space--mail" id="mail" type="email" name="mail" value="kuklachev@gmail.com" required>
+              <button class="contacts__icon contacts__icon--mail" type="button"></button>
+            </div>
+            <div class="contacts__field field">
+              <label for="tel">Телефон:*</label>
+              <input class="field__space field__space--tel" id="tel" type="tel" name="tel" value="8 (960) 900-60-90" required>
+              <button class="contacts__icon contacts__icon--phone" type="button"></button>
+            </div>
           </div>
         </div>
         <div class="form__body-comments comments">
           <h2 class="comments__title title">Комментарий</h2>
-          <input class="commets__field" type="text" value="Расскажите обо всех повадках кота" required>
+          <input class="comments__field" type="text" value="Расскажите обо всех повадках кота" required>
         </div>
-        <ul class="form__body-more more">
-          <li class="more__title title title"><h2>Дополнительно</h2></li>
-          <li class="more__check">
-            <input type="checkbox" id="sweetener" name="sweetener" checked>
-            <label for="sweetener">Сахарозаменитель</label>
-          </li>
-          <li class="more__check">
-            <input type="checkbox" id="water" name="water">
-            <label for="water">Питьевая вода</label>
-          </li>
-          <li class="more__check">
-            <input type="checkbox" id="milk" name="milk">
-            <label for="milk">Молоко</label>
-          </li>
-          <li class="more__check">
-            <input type="checkbox" id="vitamine" name="vitamine">
-            <label for="vitamine">Витамины</label>
-          </li>
-        </ul>
-        <button class="form__body-btn btn" type="submit">Отправить заявку</button>
-        <p class="form__body-description">* — Обязательные поля</p>
+        <div class="form__body-more more">
+          <h2 class="more__title title">Дополнительно</h2>
+          <ul class="more__check">
+            <li class="more__choise">
+              <input type="checkbox" id="sweetener" name="sweetener" checked>
+              <label for="sweetener">Сахарозаменитель</label>
+            </li>
+            <li class="more__choise">
+              <input type="checkbox" id="water" name="water">
+              <label for="water">Питьевая вода</label>
+            </li>
+            <li class="more__choise">
+              <input type="checkbox" id="milk" name="milk">
+              <label for="milk">Молоко</label>
+            </li>
+            <li class="more__choise">
+              <input type="checkbox" id="vitamine" name="vitamine">
+              <label for="vitamine">Витамины</label>
+            </li>
+          </ul>
+        </div>
+        <div class="form__body-footer">
+          <button class="form__body-btn btn" type="submit">Отправить заявку</button>
+          <p class="form__body-description">* — Обязательные поля</p>
+        </div>
       </form>
     </main>
     <section class="adress adress__catalog">
