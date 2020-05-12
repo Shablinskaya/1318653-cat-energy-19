@@ -1,0 +1,154 @@
+.more {
+   margin-top: 31px;
+  margin-bottom: 34px;
+  padding: 0 21px;
+}
+
+.more__title {
+  font-size: 24px;
+  border: none;
+
+  &::before {
+    width: 136px;
+  }
+}
+
+.more__choise{
+  margin-bottom: 28px;
+  position: relative;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  & label {
+    padding-left: 46px;
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #222222;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 30px;
+      border: 1px solid #cdcdcd;
+      left: 0;
+      top: -5px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 23px;
+      height: 17px;
+      left: 5px;
+      top: 2px;
+      opacity: 0;
+      fill: @general-color;
+      background-image: url(../img/icon-tick.svg);
+    }
+  }
+
+  & input:checked + label::after {
+    opacity: 1;
+  }
+}
+
+.more__choise input[type='checkbox'] {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+
+  .more {
+   position: relative;
+   margin: 0;
+   margin-top: 87px;
+   margin-bottom: 66px;
+   padding: 0;
+   border-top: solid 3px @general-color;
+  }
+
+ .more__title {
+   font-size: 36px;
+   line-height: 36px;
+
+   &::before {
+      display: none;
+   }
+ }
+
+ .more__check {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   width: 631px;
+   margin: 0 auto;
+   margin-top: 79px;
+ }
+
+ .more__choise{
+   margin: 0;
+   margin-bottom: 54px;
+
+   &:last-child {
+     margin: none;
+   }
+
+   & label {
+     padding-left: 68px;
+     font-size: 20px;
+     line-height: 20px;
+
+     &::before {
+       width: 40px;
+       height: 40px;
+       left: 0;
+       top: -5px;
+     }
+
+     &::after {
+       left: 5px;
+       top: 2px;
+       opacity: 0;
+     }
+   }
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .more {
+    margin: 0;
+    margin-top: 89px;
+    margin-bottom: 70px;
+   }
+
+  .more__check {
+    width: 1220px;
+  }
+
+  .more__choise{
+    margin: 0;
+
+    & label {
+      padding-left: 59px;
+
+      &::before {
+        left: 0;
+        top: -5px;
+      }
+
+      &::after {
+        left: 5px;
+        top: 2px;
+        opacity: 0;
+      }
+    }
+  }
+
+}

@@ -1,11 +1,11 @@
 .form {
-  width: 280px;
-  padding: 0 22px;
+  box-sizing: border-box;
 }
 
 .form__title {
   margin-top: 30px;
   margin-bottom: 35px;
+  margin-left: 22px;
 }
 
 .form__instruction {
@@ -15,17 +15,37 @@
   color: @font-title;
   line-height: 18px;
   margin-bottom: 39px;
+  margin-left: 22px;
   font-weight: bold;
+}
+
+.form__basick-info {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.form__body-btn {
+  border: none;
+  width: 280px;
+  padding: 13px 0;
+  font-size: 16px;
+  line-height: 20px;
+  margin-left: 22px;
+  margin-bottom: 23px;
+}
+
+.form__body-description {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 34px;
 }
 
 @media (min-width: @tablet-width) {
 
-  .form {
-    width: 708px;
-    padding: 0 32px;
-  }
-
   .form__title {
+    width: 706px;
+    margin: 0 auto;
     margin-top: 70px;
     margin-bottom: 53px;
     font-size: 60px;
@@ -37,16 +57,80 @@
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 69px;
+    margin-left: 70px;
   }
+
+  .form__container {
+    display: flex;
+    flex-direction: column;
+    width: 630px;
+    margin: 0 auto;
+  }
+
+  .form__basick-info {
+    width: 630px;
+    margin: 0;
+  }
+
+  .form__body-footer {
+    display: flex;
+    width: 631px;
+    margin: 0 auto;
+    margin-bottom: 73px;
+    align-items: center;
+  }
+
+  .form__body-btn {
+    width: 283px;
+    padding: 15px 0;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .form__body-description {
+    font-size: 16px;
+    line-height: 16px;
+    text-align: left;
+    margin: 0;
+    margin-left: 61px;
+  }
+
 }
 
 @media (min-width: @desktop-width) {
-  .form {
-    width: 1440px;
-    padding: 0 113x;
+
+  .form__container {
+    display: flex;
+    justify-content: space-between;
+    width: 1220px;
+    margin: 0 auto;
   }
 
   .form__title {
+    width: 1220px;
+    margin: 0 auto;
     margin-top: 86px;
+    margin-bottom: 53px;
   }
+
+  .form__instruction {
+    margin-left: 110px;
+  }
+
+  .form__container {
+    flex-direction: row;
+  }
+
+  .form__body-footer {
+    width: 1220px;
+  }
+
+  .form__body-btn {
+    width: 568px;
+  }
+
+  .form__body-description {
+    margin-left: 82px;
+  }
+
 }
