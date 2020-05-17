@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 280px;
+  width: 87%;
+  max-width: 1091px;
   margin: 0 auto;
+  margin-bottom: 42px;
 }
 
 .description h1 {
@@ -13,7 +15,12 @@
 .description__points {
   padding-left: 80px;
   margin-bottom: 20px;
+  height: 60px;
   position: relative;
+
+  &:last-child {
+    margin: 0;
+  }
 }
 
 .points__img {
@@ -21,8 +28,8 @@
   height: 60px;
   background-color: @general-color;
   position: absolute;
-  top: 3px;
-  left: 0px;
+  top: 0;
+  left: 0;
 
   &::before {
     position: absolute;
@@ -35,25 +42,48 @@
 
   &--leaf::before {
     background-image: url(../img/advantage-leaf@1x.png);
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/advantage-leaf@2x.png");
+      background-size: 50px auto;
+    }
   }
 
   &--powder::before {
     background-image: url(../img/advantage-powder@1x.png);
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/advantage-powder@2x.png");
+      background-size: 50px auto;
+    }
+
   }
 
   &--appliances::before {
     background-image: url(../img/advantage-dining@1x.png);
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/advantage-dining@2x.png");
+      background-size: 50px auto;
+    }
+
   }
 
   &--time::before {
     background-image: url(../img/advantage-clock@1x.png);
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/advantage-clock@2x.png");
+      background-size: 50px auto;
+    }
+
   }
 
 }
 
 @media (min-width: @tablet-width) {
   .description {
-    width: 708px;
+    width: 92%;
   }
 
   .description__wrapper {
@@ -65,18 +95,20 @@
 
   .description h1 {
     margin-bottom: 130px;
+    font-size: 60px;
+    line-height: 60px;
   }
 
   .description__points {
-    width: 246px;
+    width: 35%;
     padding-left: 0;
     padding-top: 119px;
-    margin-bottom: 20px;
+    margin: 0;
     position: relative;
     padding-bottom: 89px;
 
     &:nth-child(odd) {
-      margin-right: 145px;
+      margin-right: 20%;
     }
 
     &:before {
@@ -127,7 +159,8 @@
 
 @media (min-width: @desktop-width) {
   .description {
-    width: 1210px;
+    width: 84%;
+    margin-bottom: 0;
   }
 
   .description__wrapper {
@@ -140,10 +173,10 @@
   }
 
   .description__points {
-    width: 246px;
+    width: 20%;
     padding-left: 0;
     padding-top: 63px;
-    margin-bottom: 90px;
+    margin: 0;
     position: relative;
     padding-bottom: 89px;
 

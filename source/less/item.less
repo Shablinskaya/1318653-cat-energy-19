@@ -1,21 +1,23 @@
 .item {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   border-bottom: solid 1px #f2f2f2;
   padding-bottom: 25px;
 }
 
 .item__img {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.item__img img {
   width: 140px;
   height: 144px;
 }
 
+
 .item__container {
-  width: 140px;
+  width: 50%;
   padding-top: 25px;
   padding-bottom: 23px;
-  padding-left: 22px;
 }
 
 .item__title {
@@ -33,108 +35,98 @@
 }
 
 .details__btn {
-  width: 280px;
+  width: 100%;
+  margin: 0;
+  margin: 0 auto;
   text-align: center;
   font-size: 16px;
   line-height: 20px;
   padding-top: 13px;
   padding-bottom: 12px;
-  margin-left: 22px;
 }
 
 @media (min-width: @tablet-width) {
   .item {
     flex-direction: column;
-    border-bottom:none;
     padding: 0;
-    width: 324px;
+    width: 45%;
     background-color: @bg-block;
     align-items: center;
-    margin: 0 auto;
     margin-bottom: 140px;
+    margin-right: 8%;
     position: relative;
 
     &:nth-child(7) {
       margin-bottom: 0;
     }
 
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(6) {
+      margin-right: 0;
+    }
+
+
+  }
+
+  .catalog__container {
+    width: unset;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .item__img img{
+    width: 100%;
+    height: auto;
   }
 
   .item__img {
-    width: 0;
+    width: unset;
     height: 0;
     position: absolute;
     top: -48px;
 
-    img {
-      display: none;
-    }
-
     &--one {
-      width: 161px;
       height: 172px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-image: url(../img/chicken-small-tablet@1x.png);
     }
 
     &--two {
-      width: 195px;
       height: 208px;
       top: -77px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-image: url(../img/chicken-big-tablet@1x.png);
     }
 
     &--three {
-      width: 163px;
       height: 174px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-image: url(../img/fish-small-tablet@1x.png);
     }
 
     &--fourth {
-      width: 194px;
       height: 208px;
       top: -77px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-image: url(../img/fish-big-tablet@1x.png);
     }
 
     &--five {
-      width: 161px;
       height: 171px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-image: url(../img/buckwheat-small-tablet@1x.png);
     }
 
     &--six {
-      width: 195px;
       height: 208px;
       top: -77px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-image: url(../img/buckwheat-big-tablet@1x.png);
     }
 
     &--seven {
-      width: 163px;
       height: 174px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-image: url(../img/rice-small-tablet@1x.png);
     }
 
   }
 
   .item__container {
-    width: 249px;
+    width: 76%;
+    margin: 0;
     padding: 0;
-    margin: 0 auto;
   }
 
   .item__title {
@@ -155,10 +147,11 @@
   }
 
   .details__btn {
-    width: 249px;
+    width: 76%;
     font-size: 16px;
     line-height: 20px;
     margin: 0;
+    margin: 0 auto;
     margin-bottom: 40px;
     margin-top: 33px;
   }
@@ -166,50 +159,26 @@
 
 @media (min-width: @desktop-width) {
   .item {
-    width: 245px;
+    width: 20%;
+    margin: 0;
     margin-bottom: 142px;
+    margin-right: 5%;
 
     &:nth-child(7),
     &:nth-child(6),
     &:nth-child(5) {
       margin-bottom: 0;
     }
-  }
 
-  .item__img {
-
-    &--one {
-      background-image: url(../img/chicken-small-desktop@1x.png);
-    }
-
-    &--two {
-      background-image: url(../img/chicken-big-desktop@1x.png);
-    }
-
-    &--three {
-      background-image: url(../img/fish-small-desktop@1x.png);
-    }
-
-    &--fourth {
-      background-image: url(../img/fish-big-desktop@1x.png);
-    }
-
-    &--five {
-      background-image: url(../img/buckwheat-small-desktop@1x.png);
-    }
-
-    &--six {
-      background-image: url(../img/buckwheat-big-desktop@1x.png);
-    }
-
-    &--seven {
-      background-image: url(../img/rice-small-desktop@1x.png);
+    &:nth-child(2),
+    &:nth-child(6) {
+      margin-right: 5%;
     }
 
   }
 
   .item__container {
-    width: 169px;
+    width: 69%;
   }
 
   .item__title {
@@ -217,7 +186,7 @@
   }
 
   .details__btn {
-    width: 169px;
+    width: 69%;
   }
 }
 

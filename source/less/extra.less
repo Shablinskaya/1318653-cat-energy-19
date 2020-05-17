@@ -1,5 +1,5 @@
 .extra {
-  width: 280px;
+  width: 87%;
   padding-top: 31px;
   padding-bottom: 35px;
   display: flex;
@@ -7,29 +7,35 @@
   margin: 0 auto;
 }
 
-.title {
+.extra__title {
   color: @font-title;
   font-size: 24px;
   line-height: 24px;
   position: relative;
   padding-bottom: 30px;
   border-bottom: 1px solid #f2f2f2;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 44px;
-    height: 3px;
-    background-color: @general-color;
-    top: 15px;
-    right: -20px;
-  }
 }
+
+.extra .title::before {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 3px;
+  background-color: @general-color;
+  top: 15px;
+  right: -8%;
+}
+
+.extra__promo {
+  margin-top: 30px;
+  margin-bottom: 39px;
+}
+
 
 @media (min-width: @tablet-width) {
 
   .extra {
-    width: 768px;
+    width: 100%;
     padding: 0;
     padding-top: 71px;
     position: relative;
@@ -40,28 +46,27 @@
   .extra__container {
     display: flex;
     flex-direction: column;
+    width: 92%;
     margin: 0 auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .extra {
-    width: 1440px;
     padding-top: 91px;
     margin-top: 97px;
   }
 
   .title {
-    top: -28px;
-    left: 110px;
+    top: -2%;
+    left: 7%;
   }
 
   .extra__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0;
-    padding: 0 128px;
+    width: 83%;
     margin-bottom: 86px;
   }
 }

@@ -1,21 +1,25 @@
 .all {
-  width: 280px;
-  padding-top: 27px;
-  padding-bottom: 25px;
+  width: 87%;
+  margin: 0 auto;
+}
+
+.all__container {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  align-items: center;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 25px;
   text-align: center;
 
+  & img {
+    width: 31px;
+    height: 31px;
+    margin-bottom: 25px;
+  }
 }
 
-.all .st0 {
-  fill: #f2f2f2;
-}
-
-.all span {
-  margin-bottom: 25px;
-}
 .all__title {
   font-size: 16px;
   line-height: 20px;
@@ -29,6 +33,7 @@
 }
 
 .all__btn {
+  width: 100%;
   background-color: @bg-block;
   color: @font;
   font-size: 16px;
@@ -36,52 +41,45 @@
   padding-top: 13px;
   padding-bottom: 12px;
   border: none;
+  text-align: center;
+
+  &--grey:hover {
+    background-color: #ebebeb;
+  }
+
+  &--grey:active {
+    background-color: #ebebeb;
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
 
   .all {
-    position: relative;
-    width: 324px;
-    padding: 0;
-    margin: 0;
-    padding-top: 55px;
-    padding-bottom: 40px;
+    width: 45%;
     border: 1px solid #f2f2f2;
-    margin: 0 auto;
-    align-items: center;
+    margin: 0;
+  }
 
-    & svg {
-      display: none;
-    }
+  .all__container {
+    padding: 0;
+    padding-top: 50px;
+    padding-bottom: 55px;
+    width: 76%;
+    text-align: center;
 
-    & span::before {
-      position: absolute;
-      content: "";
+    & img {
       width: 61px;
-      height: 1px;
-      top: 68px;
-      left: 131px;
-      background-color: #f2f2f2;
-    }
-
-    & span::after {
-      position: absolute;
-      content: "";
-      width: 1px;
       height: 61px;
-      top: 39px;
-      left: 161px;
-      background-color: #f2f2f2;
+      margin: 0;
+      margin-bottom: 55px;
     }
-
   }
 
   .all__title {
     font-size: 20px;
     margin: 0;
-    margin-bottom: 37px;
-    margin-top: 80px;
+    margin-bottom: 28px;
     width: 146px;
   }
 
@@ -89,33 +87,29 @@
     font-size: 16px;
     line-height: normal;
     margin-bottom: 78px;
-    width: 165px;
+    width: 66%;
   }
 
   .all__btn {
-    width: 249px;
     margin: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .all {
-    width: 245px;
+    width: 20%;
+    margin: 0;
+  }
 
-    & span::before {
-      top: 68px;
-      left: 95px;
-    }
-
-    & span::after {
-      top: 39px;
-      left: 127px;
-    }
+  .all__container {
+    padding: 0;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    width: 67%;
   }
 
   .all__title {
     margin-bottom: 37px;
-    margin-top: 80px;
   }
 
   .all__details {
@@ -123,7 +117,4 @@
     margin-bottom: 93px;
   }
 
-  .all__btn {
-    width: 169px;
-  }
 }

@@ -7,14 +7,15 @@
 .footer__wrapper {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
-.footer div {
+.footer__wrapper div {
   border-bottom: 1px solid #cdcdcd;
-  width: 280px;
+  width: 100%;
 }
 
-.footer div:last-child {
+.footer__wrapper div:last-child {
   border-bottom: none;
 }
 
@@ -31,12 +32,14 @@
   .footer__wrapper {
     flex-direction: row;
     justify-content: space-between;
+    width: 92%;
+    margin: 0;
     margin: 0 auto;
   }
 
-  .footer div {
-    border-bottom: none;
-    width: 708px;
+  .footer__wrapper div {
+    border: none;
+    width: 13%;
     padding: 0;
   }
 
@@ -50,8 +53,12 @@
     padding-bottom: 56px;
   }
 
-  .footer div {
-    width: 1220px;
+  .footer__wrapper {
+    width: 84%;
+  }
+
+  .footer__wrapper div {
+    width: 13%;
   }
 }
 

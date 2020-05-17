@@ -3,157 +3,45 @@
   flex-direction: column;
 }
 
-.before-after__img {
-  margin-top: 44px;
-}
+.before-after--after {
 
-.before-after__container {
-  display: flex;
-  position: relative;
-  width: 197px;
-  justify-content: space-between;
-  align-self: center;
-  padding-top: 35px;
-  padding-bottom: 38px;
-  text-transform: uppercase;
-  color: @font-title;
-}
+  & .before-after__img--before {
+    display: none;
+  }
 
-.before-after__variant {
-  font-family: "Oswald";
-  font-weight: bold;
-}
+  & .before-after__runner::after {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 6px;
+    background-color: @general-color;
+    border: solid 1px @general-color;
+    border-radius: 3px;
+    top:43px;
+    left: 60px;
+  }
 
-.before-after__runner::before {
-  position: absolute;
-  content: "";
-  width: 84px;
-  height: 14px;
-  background-color: @bg-color;
-  border: solid 1px #cdcdcd;
-  border-radius: 6px;
-  top:39px;
-  left: 55px;
-}
-
-.before-after__runner::after {
-  position: absolute;
-  content: "";
-  width: 35px;
-  height: 6px;
-  background-color: @general-color;
-  border: solid 1px @general-color;
-  border-radius: 3px;
-  top:43px;
-  left: 60px;
 }
 
 @media (min-width: @tablet-width) {
-  .before-after {
+ /* .before-after {
     background-color: @bg-block;
     margin-top: 249px;
     height: 462px;
     justify-content: flex-end;
-  }
-
-  .before-after__img img{
-    display: none;
-
-  }
-
-  .before-after__container {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      background-image: url(../img/before-tablet@1x.png);
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 708px;
-      height: 499px;
-      top: -543px;
-      left: -66px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      background-image: url(../img/after-tablet@1x.png);
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 708px;
-      height: 517px;
-      top: -543px;
-      left: -66px;
-    }
-  }
-
-  .before-after__container {
-    width: 570px;
-    padding-top: 21px;
-    padding-bottom: 68px;
-  }
-
-  .before-after__variant {
-    font-size: 20px;
-    font-weight: 20px;
-  }
-
-
-  .before-after__runner::before {
-    width: 428px;
-    height: 6px;
-    background-color: #dcdcdc;
-    border: solid 1px #cdcdcd;
-    border-radius: 2.5px;
-    top: 29px;
-    left: 65px;
-  }
-
-  .before-after__runner::after {
-    width: 34px;
-    height: 34px;
-    background-color: #ffffff;
-    border: solid 1px #cdcdcd;
-    border-radius: 50%;
-    top:13px;
-    left: 265px;
-
-    .before-after__runner::after:hover {
-      box-shadow: rgba(0, 0, 0, 0.25);
-    }
-
-    .before-after__runner::after:active {
-      border: 2px solid @general-color;
-    }
-  }
+  }*/
 }
+
 
 @media (min-width: @desktop-width) {
 
-  .before-after {
+ /* .before-after {
     background-color: @bg-block;
     margin-top: 149px;
     height: 462px;
     justify-content: flex-end;
-  }
+  }*/
 
-  .before-after__container {
-
-    &::before {
-      background-image: url(../img/before-desktop@1x.png);
-    }
-
-    &::after {
-      background-image: url(../img/after-desktop@1x.png);
-    }
-  }
-
-  .before-after__container {
-    width: 428px;
-    padding: 0;
-  }
 
 }
 

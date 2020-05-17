@@ -1,5 +1,11 @@
 .logo {
-  height: 39px;
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .logo img {
@@ -9,24 +15,16 @@
 
 @media (min-width: @tablet-width) {
 
-  .logo {
+  .logo img {
     width: 174px;
     height: 59px;
-    background: url(../img/logo-tablet.svg);
-    background-repeat: no-repeat;
-  }
-
-  .logo img {
-    display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
 
-  .logo {
+  .logo img {
     width: 203px;
     height: 60px;
-    background: url(../img/logo-desktop.svg);
-    background-repeat: no-repeat;
   }
 }

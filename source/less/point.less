@@ -1,7 +1,7 @@
 .point {
   order: -1;
   display: flex;
-  width: 280px;
+  width: 87%;
   justify-content: space-between;
   margin: 0 auto;
   text-align: left;
@@ -12,30 +12,33 @@
 .point__title {
   font-size: 16px;
   line-height: 20px;
+  width: 44%;
+  margin: 0;
 }
 
 .point p {
-  width: 209px;
+  width: 49%;
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width: @tablet-width) {
 
   .point {
-    width: 625px;
+    width: 92%;
     padding: 0;
     padding-top: 33px;
     padding-bottom: 33px;
   }
 
   .point__title {
-    width: 154px;
+    width: 21%;
     font-size: 20px;
     line-height: 25px;
   }
 
   .point p {
-    width: 172px;
-    height: 76px;
+    width: 22%;
     font-size: 16px;
     line-height: 20px;
     text-align: right;
@@ -45,8 +48,9 @@
 @media (min-width: @desktop-width) {
 
   .point {
+    justify-content: space-around;
     position: absolute;
-    width: 570px;
+    width: 39%;
     padding: 0;
     padding-top: 66px;
     padding-bottom: 59px;
@@ -54,6 +58,15 @@
     left: 101px;
     z-index: 1;
     background-color: @bg-color;
+  }
+
+  .point__title {
+    width: 27%;
+  }
+
+  .point p {
+    width: 31%;
+    text-align: left;
   }
 
 }

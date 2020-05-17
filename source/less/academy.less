@@ -1,32 +1,33 @@
 .academy__link {
   display: flex;
-  width: 280px;
+  width: 87%;
   justify-content: space-between;
   padding-top: 22px;
   padding-bottom: 22px;
-  align-items: center;
+  margin: 0 auto;
+
+  &:active .academy__name {
+    opacity: 0.3;
+  }
+
+  &:hover .academi__icon {
+    fill: @general-color;
+  }
+
+  &:active .academi__icon {
+    opacity: 0.3;
+  }
+
 }
 
 .academy__name {
   font-size: 16px;
   line-height: 16px;
   color: @font;
-
-  &:active {
-    color: rgba(68, 68, 68, 0.3);
-  }
 }
 
-.academy__logo {
+.academi__icon {
   fill: #666666;
-
-  &:hover {
-    fill: @general-color;
-  }
-
-  &:active {
-    fill: rgb(104, 183, 56, 0.3)
-  }
 }
 
 @media (min-width: @tablet-width) {

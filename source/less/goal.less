@@ -9,7 +9,6 @@
 .goal__check {
   margin-bottom: 27px;
   position: relative;
-  padding-left: 22px;
 
   &:last-child {
     margin: 0;
@@ -60,11 +59,16 @@
 
 @media (min-width: @tablet-width) {
   .goal {
-    border: 1px solid #cdcdcd;
-    padding: 0;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    border: solid 1px #cdcdcd;
+    width: 89%;
+    margin: 0 auto;
+  }
+
+  .form__wrapper--goal {
+    margin: 0;
     padding-left: 28px;
+    padding-bottom: 25px;
+    padding-top: 25px;
   }
 
   .goal__check {
@@ -97,10 +101,10 @@
 @media (min-width: @desktop-width) {
   .goal {
     padding: 0;
-    padding-top: 36px;
-    padding-bottom: 33px;
-    padding-left: 28px;
-    width: 570px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 47%;
+    margin: 0;
   }
 
   .goal__check {

@@ -8,52 +8,31 @@
   background-color: @bg-block;
 }
 
+.adress__map {
+  width: auto;
+  margin: 0 auto;
+}
+
 .adress__map iframe {
   z-index: 2;
   border: none;
 }
 
-.adress__map p {
+.adress__map img {
   margin: 0;
   position: absolute;
-  top: 120px;
   left: 0;
   z-index: 1;
 }
 
 @media (min-width: @tablet-width) {
   .adress__map iframe {
-    width: 767px;
+    width: auto;
     height: 400px;
   }
 
-  .adress__map img {
-    display: none;
-  }
-
-  .adress__map p {
-    top: 141px;
-    width: 767px;
-    height: 400px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(../img/bg-map-tablet@1x.png);
-  }
 }
 
 @media (min-width: @desktop-width) {
 
-  .adress__map iframe {
-    width: 1440px;
-  }
-
-  .adress__map img {
-    display: none;
-  }
-
-  .adress__map p {
-    top: 0;
-    width: 1440px;
-    background-image: url(../img/bg-map-desktop@1x.png);
-  }
 }

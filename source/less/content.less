@@ -10,6 +10,12 @@
   align-items: center;
   height: 305px;
   position: relative;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: 316px auto;
+  }
+
 }
 
 .content__title {
@@ -24,112 +30,134 @@
   margin-top: 19px;
   font-size: 14px;
   line-height: 14px;
+}
+
+.content__btn {
+  min-width: 87%;
+  padding-top: 14px;
+  padding-bottom: 11px;
+
+  &--general {
+    display: none;
+  }
+}
+
+.content__picture img {
+  margin-top: 29px;
+  width: 280px;
+  height: 270px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .content {
+    background: none;
+    max-width: 1091px;
+    width: 92%;
+    height: 940px;
+    margin: 0 auto;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .content__wrapper {
+    padding-left: 120px;
+  }
+
+
+  .content__title {
+    width: 419px;
+    color: @font-title;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .content__discription {
+    margin-top: 33px;
+    font-size: 20px;
+    line-height: 20px;
+    color: @font-title;
   }
 
   .content__btn {
-    bottom: -187px;
-    right: 20px;
-    position: absolute;
-    width: 280px;
+    min-width: unset;
+    width: 245px;
+    margin-top: 48px;
     padding-top: 14px;
     padding-bottom: 11px;
-  }
+    text-align: center;
 
-  .content__img {
-    margin-top: 29px;
-    width: 280px;
-    height: 270px;
-  }
-
-  @media (min-width: @tablet-width) {
-    .content {
-      display: flex;
-      background: none;
-      width: 709px;
-      height: 867px;
-      margin: 0 auto;
-      text-align: left;
-      align-items: flex-start;
-      padding-left: 111px;
-      background-image: url(../img/index-can-tablet@1x.jpg);
-      background-position-x: 50%;
-      background-position-y: 100%;
-      background-repeat: no-repeat;
+    &--general {
+      display: inline-block;
     }
 
-    .content__title {
-      width: 419px;
-      margin-top: 61px;
-      color: @font-title;
-      font-size: 60px;
-      line-height: 60px;
-    }
-
-    .content__discription {
-      margin-top: 33px;
-      font-size: 20px;
-      line-height: 20px;
-      color: @font-title;
-      }
-
-      .content__btn {
-        bottom: 540px;
-        right: 437px;
-        width: 273px;
-        text-align: center;
-      }
-
-    .content img {
+    &--mobile {
       display: none;
-      background-image: url(../img/index-can-tablet@1x.jpg);
     }
   }
 
-  @media (min-width: @desktop-width) {
-    .content {
-      flex-direction: row;
-      flex-wrap: nowrap;
-      width: 1440px;
-      height: 696px;
-      margin: 0;
-      text-align: none;
-      padding: 0;
-      background-image: none;
-      top: -102px;
-    }
+  .content__picture img {
+    width: 709px;
+    height: 609px;
+    align-self: center;
+  }
 
-    .content__wrapper {
-      display: flex;
-      flex-direction: column;
-      width: 380px;
-      margin: 0 auto;
-      margin-top: 226px;
-      text-align: left;
-    }
+}
 
-    .content__img {
-      margin: 0;
-      width: 720px;
-      height: 696px;
-      background-position-x: 50%;
-      background-position-y: 100%;
-      background-repeat: no-repeat;
-      background-image: url(../img/index-background-desktop@1x.jpg);
-    }
 
-    .content img {
-      width: 552px;
-      height: 449px;
-      background-repeat: no-repeat;
-      background-image: url(../img/index-can-desktop@1x.png);
-    }
+@media (min-width: @desktop-width) {
+  .content {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0;
+    height: 696px;
+    padding: 0;
+    top: -118px;
+    background-image: url(../img/index-background-desktop@1x.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
 
-    .content__btn {
-      position: static;
-      margin-top: 53px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
     }
 
   }
+
+  .content__container {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: 0 left;
+    padding-left: 185px;
+    padding-top: 142px;
+  }
+
+  .content__wrapper {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+  }
+
+  .content__picture img {
+    margin-top: 0;
+    width: 552px;
+    height: 499px;
+    align-self: center;
+  }
+
+  .content__btn {
+    margin-top: 53px;
+    padding-top: 17px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+
+}
 
 
 
