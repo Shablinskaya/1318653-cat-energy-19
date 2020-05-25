@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 
   &:last-child {
     margin: 0;
@@ -19,22 +19,34 @@
 }
 
 .basick-info__field {
-  border: 1px solid #cdcdcd;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 16px;
+  border: 1px solid rgba(205, 205, 205, 0.5);
+  padding-top: 9px;
+  padding-bottom: 14px;
+  padding-left: 18px;
   text-transform: uppercase;
   color: @font;
-  width: 82%;
+  width: 74%;
   font-size: 16px;
   line-height: 18px;
 
   &--weight {
-    width: 72%;
+    width: 65%;
   }
 
   &--age {
-    width: 61%;
+    width: 54%;
+  }
+
+  &:invalid {
+    border: 2px solid #ff8282;
+  }
+
+  &:valid {
+    border: 2px solid #444444;
+  }
+
+  &:hover {
+    border: 1px solid rgb(205, 205, 205);
   }
 }
 
@@ -45,7 +57,7 @@
 
     &:last-child {
       margin: 0;
-      margin-bottom: 70px;
+      margin-bottom: 72px;
     }
 
     & label {
@@ -55,26 +67,26 @@
   }
 
   .basick-info__field {
-    padding-top: 17px;
-    padding-bottom: 17px;
-    padding-left: 20px;
-    width: 90%;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 17px;
+    width: 86%;
     font-size: 20px;
     line-height: 20px;
 
     &--weight {
-      width: 79%;
+      width: 81%;
     }
 
     &--age {
-      width: 71%;
+      width: 75%;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .basick-info {
-    width: 82%;
+    width: 88%;
     margin: 0;
   }
 
@@ -86,7 +98,8 @@
   }
 
   .basick-info__field {
-    width: 89%;
+    width: 85%;
+    padding-bottom: 10px;
 
     &--weight {
       width: 80%;

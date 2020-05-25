@@ -9,15 +9,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 65px;
+  min-height: 65px;
   position: relative;
   align-items: center;
-  padding: 0 22px;
 }
 
 .header__toggle-btn {
   position: relative;
-  width: 25px;
+  width: 24px;
   height: 19px;
   border: none;
   background-color: #ffffff;
@@ -103,27 +102,25 @@
 @media (min-width: @tablet-width) {
 
   .header__menu {
-    width: 468px;
+    width: 438px;
     margin: 0;
   }
 
   .header__container {
     display: flex;
     flex-direction: row;
-    max-width: 1091px;
+    max-width: 1220px;
     width: 92%;
     justify-content: space-between;
     margin: 0 auto;
     align-items: center;
     border-bottom: none;
-    padding-top: 30px;
-  }
+    padding-top: 22px;
 
-  .header__wrapper {
-    display: flex;
-    justify-content: space-between;
-    height: auto;
-    padding: 0;
+    & .wrapper {
+      width: unset;
+      margin: 0;
+    }
   }
 
   .header__toggle-btn {
@@ -134,22 +131,32 @@
 
 @media (min-width: @desktop-width) {
 
-  .header__menu {
-    width: 409px;
+  .header {
+    margin-bottom: -36px;
   }
 
   .header__container {
     position: relative;
-    width: 84%;
+    width: auto;
     z-index: 1;
     padding: 0;
-    padding-top: 53px;
+    padding-top: 51px;
   }
 
   .header__wrapper {
     display: flex;
     height: auto;
     padding: 0;
+  }
+
+  .header__menu {
+    width: 479px;
+    margin: 0;
+  }
+
+  .header__logo {
+    width: 203px;
+    height: 60px;
   }
 
   .header__toggle-btn {

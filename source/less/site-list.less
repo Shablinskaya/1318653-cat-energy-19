@@ -33,7 +33,7 @@
     font-weight: normal;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     width: auto;
     margin: 0;
   }
@@ -59,11 +59,9 @@
 
       position: absolute;
       right: 0;
-      bottom: -7px;
+      bottom: -9px;
       left: 0;
-
-      height: 3px;
-
+      height: 2px;
       background: @general-color;
     }
   }
@@ -75,7 +73,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 450px;
   }
 
 
@@ -83,6 +80,8 @@
     display: block;
     padding: 0;
     font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
   }
 
   .menu__list--background a {
@@ -99,6 +98,14 @@
     }
   }
 
+  .site-list__item--active {
+    position: relative;
+
+    &::after {
+      bottom: -13px;
+    }
+  }
+
   .menu__list--background .site-list__item--active {
     position: relative;
 
@@ -107,10 +114,10 @@
 
       position: absolute;
       right: 0;
-      bottom: -7px;
+      bottom: -12px;
       left: 0;
 
-      height: 3px;
+      height: 2px;
 
       background: @bg-color;
     }

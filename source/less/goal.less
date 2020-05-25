@@ -2,12 +2,12 @@
   border-top: 1px solid #cdcdcd;
   border-bottom: 1px solid #cdcdcd;
   padding: 0;
-  padding-top: 21px;
-  padding-bottom: 22px;
+  padding-top: 25px;
+  padding-bottom: 26px;
 }
 
 .goal__check {
-  margin-bottom: 27px;
+  margin-bottom: 21px;
   position: relative;
 
   &:last-child {
@@ -26,30 +26,38 @@
     &::before {
       position: absolute;
       content: "";
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
       border: 1px solid #cdcdcd;
       border-radius: 50%;
       left: 0;
-      top: -5px;
+      top: -2px;
     }
 
     &::after {
       position: absolute;
       content: "";
-      width: 12px;
-      height: 12px;
+      width: 10px;
+      height: 10px;
       border: 1px solid @general-color;
       background-color: @general-color;
       border-radius: 50%;
       left: 9px;
-      top: 4px;
+      top: 6px;
       opacity: 0;
     }
   }
 
   & input:checked + label::after {
     opacity: 1;
+  }
+
+  &:hover label::before {
+    border-color: #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -60,20 +68,21 @@
 @media (min-width: @tablet-width) {
   .goal {
     border: solid 1px #cdcdcd;
-    width: 89%;
+    width: 82%;
+    padding-top: 33px;
+    padding-bottom: 32px;
     margin: 0 auto;
-  }
 
-  .form__wrapper--goal {
-    margin: 0;
-    padding-left: 28px;
-    padding-bottom: 25px;
-    padding-top: 25px;
+    & .wrapper {
+      margin: 0;
+      width: 100%;
+      padding-left: 29px;
+    }
   }
 
   .goal__check {
     padding: 0;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 
     & label {
       padding-left: 61px;
@@ -81,17 +90,17 @@
       line-height: 20px;
 
       &::before {
-        width: 40px;
-        height: 40px;
-        left: 0;
-        top: -5px;
+        width: 38px;
+        height: 38px;
+        left: 2px;
+        top: -4px;
       }
 
       &::after {
-        width: 18px;
-        height: 18px;
-        left: 11px;
-        top: 6px;
+        width: 16px;
+        height: 16px;
+        left: 13px;
+        top: 7px;
       }
     }
 
@@ -101,15 +110,15 @@
 @media (min-width: @desktop-width) {
   .goal {
     padding: 0;
-    padding-top: 25px;
+    padding-top: 33px;
     padding-bottom: 25px;
-    width: 47%;
+    width: 54%;
     margin: 0;
   }
 
   .goal__check {
     padding: 0;
-    margin-bottom: 33px;
+    margin-bottom: 32px;
     position: relative;
 
     &:last-child {
@@ -117,10 +126,19 @@
     }
 
     & label {
-      padding-left: 60px;
+      padding-left: 56px;
       font-size: 20px;
-      line-height: 20px;
+      line-height: 19px;
 
+      &::before {
+        left: -3px;
+        top: -3px;
+      }
+
+      &::after {
+        left: 8px;
+        top: 9px;
+      }
     }
 
   }

@@ -1,19 +1,10 @@
 .extra {
   width: 87%;
-  padding-top: 31px;
+  padding-top: 28px;
   padding-bottom: 35px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-}
-
-.extra__title {
-  color: @font-title;
-  font-size: 24px;
-  line-height: 24px;
-  position: relative;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #f2f2f2;
 }
 
 .extra .title::before {
@@ -22,13 +13,13 @@
   width: 20%;
   height: 3px;
   background-color: @general-color;
-  top: 15px;
+  top: 14px;
   right: -8%;
 }
 
 .extra__promo {
-  margin-top: 30px;
-  margin-bottom: 39px;
+  margin-top: 37px;
+  margin-bottom: 2px;
 }
 
 
@@ -37,10 +28,20 @@
   .extra {
     width: 100%;
     padding: 0;
-    padding-top: 71px;
+    padding-top: 91px;
     position: relative;
     border-top: 3px solid @general-color;
-    margin-top: 88px;
+    margin-top: 75px;
+
+    & .title {
+    font-size: 34px;
+    line-height: 42px;
+    padding: 0;
+    padding-left: 39px;
+    padding-right: 31px;
+    top: -28px;
+    left: 29px;
+    }
   }
 
   .extra__container {
@@ -54,19 +55,18 @@
 @media (min-width: @desktop-width) {
   .extra {
     padding-top: 91px;
-    margin-top: 97px;
-  }
+    margin-top: 83px;
 
-  .title {
-    top: -2%;
-    left: 7%;
+    & .title {
+      left: 70px;
+    }
   }
 
   .extra__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 83%;
+    width: 85%;
     margin-bottom: 86px;
   }
 }
