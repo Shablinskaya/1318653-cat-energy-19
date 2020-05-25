@@ -1,13 +1,20 @@
 .logo-footer {
   display: flex;
   justify-content: center;
-  padding-top: 39px;
-  padding-bottom: 31px;
+  padding-top: 34px;
+  padding-bottom: 27px;
 }
 
-.logo-footer img {
-  width: 124px;
-  height: 28px;
+.logo-footer__link {
+
+  &:hover img {
+    opacity: 0.8;
+  }
+
+  &:active img {
+    opacity: 0.3;
+  }
+
 }
 
 @media (min-width: @tablet-width) {

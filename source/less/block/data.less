@@ -1,7 +1,6 @@
 .data {
   display: flex;
   justify-content: space-between;
-  margin-top: 27px;
 }
 
 .data div {
@@ -9,15 +8,16 @@
   border: 1px solid #cdcdcd;
   border-radius: 3%;
   position: relative;
-  width: 124px;
+  width: 121px;
 }
 
 .data__info {
   font-family: "Oswald";
   color: @font-title;
   font-size: 24px;
-  line-height: 24px;
-  padding-top: 17px;
+  line-height: 17px;
+  padding-top: 16px;
+  text-transform: uppercase;
 }
 
 .data__weight {
@@ -28,12 +28,14 @@
 .data__weight::before {
   position: absolute;
   content: "снижение веса";
-  font-size: 12px;
-  line-height: 12px;
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 11px;
   width: 57px;
-  top: 49px;
-  left: 28px;
-  padding: 3px;
+  top: 46px;
+  left: 17px;
+  padding-left: 15px;
+  padding-right: 16px;
   background-color: @bg-block;
   color: #444444;
 }
@@ -46,20 +48,20 @@
 .data__date::before {
   position: absolute;
   content: "затрачено времени";
-  font-size: 12px;
-  line-height: 12px;
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 11px;
   width: 57px;
-  top: 49px;
-  left: 29px;
-  padding: 3px;
-  background-color: @bg-block;
+  top: 47px;
+  left: 17px;
+  padding-left: 15px;
+  padding-right: 16px;  background-color: @bg-block;
   color: #444444;
 }
 
 @media (min-width: @tablet-width) {
   .data {
     width: 367px;
-    margin-top: 56px;
   }
 
   .data div {
@@ -69,6 +71,7 @@
   .data__info {
     font-size: 30px;
     line-height: 37px;
+    padding-top: 13px;
   }
 
   .data__weight::before {
@@ -76,20 +79,46 @@
     line-height: 14px;
     width: 97px;
     top: 59px;
-    left: 34px;
+    left: 22px;
     padding: 3px;
+    padding-left: 10px;
+    padding-right: 8px;
     background-color: @bg-color;
   }
 
   .data__date::before {
     font-size: 14px;
     line-height: 14px;
-    width: 110px;
+    width: 131px;
     top: 63px;
-    left: 24px;
+    left: 9px;
+    padding-left: 7px;
+    padding-right: 7px;
     background-color: @bg-color;
   }
 
+}
 
+@media (min-width: @tablet-width) {
+  .data__weight::before {
+    background-color: @bg-color;
+  }
+
+  .data__date::before {
+    padding-right: 7px;
+    background-color: @bg-color;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .data__weight::before {
+    background-color: @bg-block;
+  }
+
+  .data__date::before {
+    padding-right: 7px;
+    background-color: @bg-block;
+  }
 
 }

@@ -1,20 +1,21 @@
 .more {
-   margin-top: 31px;
-  margin-bottom: 34px;
-  padding: 0 21px;
+  margin-top: 27px;
+  margin-bottom: 38px;
 }
 
 .more__title {
-  font-size: 24px;
+  font-size: 22px;
   border: none;
+  padding-bottom: 38px;
 
   &::before {
-    width: 136px;
+    width: 48%;
+    top: 14px;
   }
 }
 
 .more__choise{
-  margin-bottom: 28px;
+  margin-bottom: 22px;
   position: relative;
 
   &:last-child {
@@ -33,24 +34,32 @@
     &::before {
       position: absolute;
       content: "";
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 29px;
       border: 1px solid #cdcdcd;
       left: 0;
-      top: -5px;
+      top: -2px;
     }
 
     &::after {
       position: absolute;
       content: "";
       width: 23px;
-      height: 17px;
+      height: 20px;
       left: 5px;
-      top: 2px;
+      top: 6px;
       opacity: 0;
-      fill: @general-color;
       background-image: url(../img/icon-tick.svg);
+      background-repeat: no-repeat;
     }
+  }
+
+  &:hover label::before {
+    border-color: #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   & input:checked + label::after {
@@ -68,14 +77,19 @@
    position: relative;
    margin: 0;
    margin-top: 87px;
-   margin-bottom: 66px;
+   margin-bottom: 63px;
    padding: 0;
    border-top: solid 3px @general-color;
   }
 
  .more__title {
-   font-size: 36px;
+   font-size: 34px;
    line-height: 36px;
+   padding: 0;
+   padding-left: 38px;
+   padding-right: 40px;
+   top: -25px;
+   left: 31px;
 
    &::before {
       display: none;
@@ -84,7 +98,6 @@
 
  .more__check {
    display: flex;
-   justify-content: space-between;
    flex-wrap: wrap;
    width: 631px;
    margin: 0 auto;
@@ -93,27 +106,41 @@
 
  .more__choise{
    margin: 0;
-   margin-bottom: 54px;
+   margin-bottom: 48px;
+
+
+    &:nth-child(1) {
+      margin-right: 19%;
+    }
+
+    &:nth-child(3) {
+      margin-right: 34%;
+    }
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      margin-bottom: 0;
+    }
 
    &:last-child {
      margin: none;
    }
 
    & label {
-     padding-left: 68px;
+     padding-left: 60px;
      font-size: 20px;
-     line-height: 20px;
+     line-height: 19px;
 
      &::before {
-       width: 40px;
-       height: 40px;
-       left: 0;
-       top: -5px;
+        width: 38px;
+        height: 38px;
+        left: 3px;
+        top: -3px;
      }
 
      &::after {
-       left: 5px;
-       top: 2px;
+       left: 11px;
+       top: 6px;
        opacity: 0;
      }
    }
@@ -125,28 +152,42 @@
   .more {
     margin: 0;
     margin-top: 89px;
-    margin-bottom: 70px;
-   }
+    margin-bottom: 68px;
+  }
+
+  .more__title {
+    left: 71px;
+  }
+
 
   .more__check {
-    width: 1220px;
+    width: 100%;
   }
 
   .more__choise{
     margin: 0;
+    margin-right: 11%;
+
+    &:nth-child(1) {
+      margin-right: 9%;
+    }
+
+    &:nth-child(3) {
+      margin-right: 16%;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
 
     & label {
       padding-left: 59px;
 
       &::before {
-        left: 0;
+        width: 37px;
+        height: 37px;
+        left: 1px;
         top: -5px;
-      }
-
-      &::after {
-        left: 5px;
-        top: 2px;
-        opacity: 0;
       }
     }
   }

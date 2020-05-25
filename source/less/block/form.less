@@ -1,75 +1,91 @@
 .form {
   box-sizing: border-box;
+
+  & input[type=number]::-webkit-inner-spin-button,
+  & input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  & input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+  }
+
+  & input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  & input::-ms-clear {
+    display: none;
+  }
 }
 
 .form__title {
   margin-top: 30px;
   margin-bottom: 35px;
-  margin-left: 22px;
 }
 
 .form__instruction {
   font-family: "Oswald";
-  width: 240px;
+  font-size: 13px;
+  width: 89%;
   text-transform: uppercase;
   color: @font-title;
   line-height: 18px;
   margin-bottom: 39px;
-  margin-left: 22px;
   font-weight: bold;
 }
 
 .form__basick-info {
-  width: 280px;
+  width: 100%;
   margin: 0 auto;
 }
 
 .form__body-btn {
   border: none;
-  width: 280px;
-  padding: 13px 0;
+  width: 100%;
+  padding: 10px 0;
   font-size: 16px;
   line-height: 20px;
-  margin-left: 22px;
-  margin-bottom: 23px;
+  margin-bottom: 18px;
 }
 
 .form__body-description {
   display: block;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: @tablet-width) {
 
+  .form {
+    margin-bottom: 72px;
+  }
+  .form__wrapper {
+
+    &--tablet {
+      width: 92%;
+    }
+  }
+
   .form__title {
-    width: 706px;
-    margin: 0 auto;
-    margin-top: 70px;
-    margin-bottom: 53px;
+    margin-top: 52px;
+    margin-bottom: 57px;
     font-size: 60px;
     line-height: 60px;
   }
 
   .form__instruction {
-    width: 353px;
-    font-size: 20px;
-    line-height: 30px;
-    margin-bottom: 69px;
-    margin-left: 70px;
-  }
-
-  .form__container {
-    display: flex;
-    flex-direction: column;
-    width: 630px;
-    margin: 0 auto;
+    width: 57%;
+    font-size: 19px;
+    line-height: 29px;
+    margin-bottom: 67px;
   }
 
   .form__basick-info {
-    width: 630px;
-    margin: 0;
+    width: 100%;
   }
 
   .form__body-footer {
@@ -81,8 +97,8 @@
   }
 
   .form__body-btn {
-    width: 283px;
-    padding: 15px 0;
+    width: 286px;
+    padding: 16px 0;
     font-size: 20px;
     margin: 0;
   }
@@ -99,23 +115,33 @@
 
 @media (min-width: @desktop-width) {
 
+  .form {
+    margin-bottom: 82px;
+  }
+
   .form__container {
     display: flex;
     justify-content: space-between;
-    width: 1220px;
+    width: 85%;
     margin: 0 auto;
+
+    & .wrapper {
+      margin: 0;
+      width: 62%;
+    }
   }
 
   .form__title {
-    width: 1220px;
+    width: unset;
     margin: 0 auto;
-    margin-top: 86px;
+    margin-top: 74px;
     margin-bottom: 53px;
   }
 
   .form__instruction {
-    margin-left: 110px;
+    width: 27%;
   }
+
 
   .form__container {
     flex-direction: row;
@@ -126,7 +152,7 @@
   }
 
   .form__body-btn {
-    width: 568px;
+    width: 571px;
   }
 
   .form__body-description {

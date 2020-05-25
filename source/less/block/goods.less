@@ -1,3 +1,4 @@
+
 .goods__details {
   border-bottom: solid 1px #f2f2f2;
   padding-top: 14px;
@@ -8,26 +9,26 @@
   font-size: 16px;
   line-height: 16px;
   color: #222222;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .goods__wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .goods__wrapper p {
   line-height: 14px;
-  margin-bottom: 14px;
 }
 
 .goods__details-btn {
   border: none;
-  padding-top: 13px;
-  padding-bottom: 12px;
+  padding-top: 11px;
+  padding-bottom: 9px;
   font-size: 16px;
   line-height: 20px;
-  width: 280px;
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
@@ -36,62 +37,78 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 708px;
+    width: 100%;
     border: solid 1px #f2f2f2;
   }
 
   .goods__details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     border-bottom: solid 1px #f2f2f2;
-    padding: 28px 37px;
-    margin: 0 auto;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
 
     &:last-child {
       border-bottom: none;
     }
+
+    &-amount {
+      width: 58%;
+    }
+
+    &-cost {
+      width: 19%;
+    }
+
+  }
+
+  .goods__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 89%;
+    margin: 0 auto;
   }
 
   .goods__details h3 {
     font-size: 20px;
     line-height: 20px;
     color: #222222;
-    margin-bottom: 27px;
+    margin-bottom: 24px;
   }
 
   .goods__wrapper {
-    width: 209px;
+    display: flex;
+    width: 37%;
+    margin: 0;
   }
 
   .goods__wrapper p {
-    display: block;
-    font-size: 16px;
-    line-height: 20px;
+    display: table-cell;
+    font-size: 15px;
+    line-height: 21px;
     margin: 0;
     text-align: right;
-  }
-
-  .goods__details-btn {
-    width: 633px;
   }
 }
 @media (min-width: @desktop-width) {
 
   .goods {
-    width: 895px;
+    width: 73%;
     border: none;
   }
 
   .goods__details {
     padding: 0;
-    padding-top: 13px;
+    padding-top: 17px;
     padding-bottom: 14px;
-    width: 846px;
+    width: 100%;
     margin: 0;
 
     &:last-child {
       border-bottom: solid 1px #f2f2f2;
+      padding: 0;
+      padding-top: 20px;
+      padding-bottom: 15px
     }
 
     &:first-child {
@@ -99,15 +116,33 @@
     }
   }
 
+  .goods__container {
+    width: 100%;
+    margin: 0;
+    align-items: center;
+  }
+
   .goods__details h3 {
+    width: 32%;
     margin: 0;
   }
 
   .goods__wrapper {
-    width: 280px;
+    width: 32%;
+    justify-content: unset;
+  }
+
+  .goods__wrapper p {
+    text-align: left;
+
+    &:first-child {
+      margin-right: 42%;
+    }
   }
 
   .goods__details-btn {
-    width: 245px;
+    width: 27%;
+    padding-top: 10px;
+    padding-bottom: 9px;
   }
 }
