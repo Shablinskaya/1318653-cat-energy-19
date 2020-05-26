@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <header class="header">
+    <header class="header header__beckground">
       <div class="header__container header__container--closed header__container--nojs">
         <div class="header__wrapper wrapper">
           <a class="header__logo logo" href="index.html">
@@ -36,8 +36,8 @@
         </nav>
       </div>
       <div class="header__content content">
-        <div class="content__container">
-          <div class="content__wrapper wrapper">
+        <div class="content__container wrapper content__container--tablet">
+          <div class="content__wrapper">
             <h1 class="content__title">Функциональное питание для котов</h1>
             <p class="content__discription">Занялся собой? Займись котом!</p>
             <a class="content__btn content__btn--general btn" href="">Подобрать программу</a>
@@ -88,7 +88,7 @@
       </div>
     </section>
     <section class="description">
-      <div class="description__box">
+      <div class="description__box wrapper">
         <h1>Как это работает</h1>
         <div class="description__wrapper">
           <div class="description__points description__points--one points">
@@ -111,12 +111,12 @@
       </div>
     </section>
     <section class="example">
-      <div class="example__adjust">
+      <div class="example__adjust wrapper">
         <h1 class="example__title">Живой пример</h1>
       </div>
       <div class="example__color">
-        <div class="example__block">
-          <div class="example__wrapper wrapper">
+        <div class="example__block wrapper">
+          <div class="example__wrapper ">
             <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и <br>по-прежнему спит по 16 часов в день. </p>
             <div class="example__container">
               <div class="example__data data">
@@ -163,9 +163,11 @@
     </section>
     <section class="adress adress__catalog adress__catalog--mobile">
       <div class="adress__adjust">
-        <div class="adress__point  point">
-          <h3 class="point__title">приглашаем к&nbspсотрудничеству дилеров!</h3>
-          <p class="point__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="wrapper">
+          <div class="adress__point  point">
+            <h3 class="point__title">приглашаем к&nbspсотрудничеству дилеров!</h3>
+            <p class="point__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
         </div>
         <div class="adress__map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1590078966427!5m2!1sru!2sru" width="320" height="364"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -180,39 +182,41 @@
       </div>
     </section>
     <footer class="footer">
-      <div class="footer__logo logo-footer">
-        <div class="footer__wrapper wrapper footer__wrapper--tablet">
-          <a class="logo-footer__link" href="index.html">
-            <img width="128" src="img/logo-footer.svg" alt="">
-          </a>
+      <div class="wrapper">
+        <div class="footer__logo logo-footer">
+          <div class="footer__wrapper  footer__wrapper--tablet">
+            <a class="logo-footer__link" href="index.html">
+              <img width="128" src="img/logo-footer.svg" alt="">
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="footer__social social">
-        <div class="footer__wrapper wrapper footer__wrapper--tablet">
-          <section class="social__wrapper">
-            <a class="social__link" href="#">
-              <svg class="social__icon social__icon--vk" width="22" height="12"><use xlink:href="./img/sprite.svg#icon-vk"></use>
-                </svg>
-            </a>
-            <a class="social__link social__link--center" href="#">
-              <svg class="social__icon social__icon--instagramm"  width="17" height="17">
-                <use xlink:href="./img/sprite.svg#icon-insta"></use></svg>
-            </a>
-            <a class="social__link" href="#">
-              <svg class="social__icon social__icon--fb"  width="10" height="19">
-                <use xlink:href="./img/sprite.svg#icon-facebook"></use> </svg>
-            </a>
-          </section>
+        <div class="footer__social social">
+          <div class="footer__wrapper  footer__wrapper--tablet">
+            <section class="social__wrapper">
+              <a class="social__link" href="#">
+                <svg class="social__icon social__icon--vk" width="22" height="12"><use xlink:href="./img/sprite.svg#icon-vk"></use>
+                  </svg>
+              </a>
+              <a class="social__link social__link--center" href="#">
+                <svg class="social__icon social__icon--instagramm"  width="17" height="17">
+                  <use xlink:href="./img/sprite.svg#icon-insta"></use></svg>
+              </a>
+              <a class="social__link" href="#">
+                <svg class="social__icon social__icon--fb"  width="10" height="19">
+                  <use xlink:href="./img/sprite.svg#icon-facebook"></use> </svg>
+              </a>
+            </section>
+          </div>
         </div>
-      </div>
-      <div class="footer__academy academy">
-        <div class="footer__wrapper wrapper footer__wrapper--tablet">
-          <a class="academy__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <p class="academy__name">HTML Academy</p>
-            <svg class="academi__icon" width="27" height="34">
-              <use xlink:href="./img/sprite.svg#icon-academy"></use>
-            </svg>
-          </a>
+        <div class="footer__academy academy">
+          <div class="footer__wrapper footer__wrapper--tablet">
+            <a class="academy__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <p class="academy__name">HTML Academy</p>
+              <svg class="academi__icon" width="27" height="34">
+                <use xlink:href="./img/sprite.svg#icon-academy"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </footer>

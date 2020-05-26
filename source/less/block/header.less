@@ -135,6 +135,24 @@
     margin-bottom: -36px;
   }
 
+  .header__beckground {
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: calc(100%/2);
+      height: 696px;
+      background-color: #5eaa2f;
+      background-image: url(../img/index-background-desktop@1x.jpg);
+      background-size: 680px auto;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    }
+  }
+
   .header__container {
     position: relative;
     width: auto;
