@@ -62,11 +62,8 @@
 
   .form {
     margin-bottom: 72px;
-  }
-  .form__wrapper {
-
-    &--tablet {
-      width: 92%;
+    & .form__wrapper--tablet {
+      width: 81%;
     }
   }
 
@@ -111,12 +108,20 @@
     margin-left: 61px;
   }
 
+  .form__body .wrapper {
+    width: 623px;
+  }
+
 }
 
 @media (min-width: @desktop-width) {
 
   .form {
     margin-bottom: 82px;
+    & .form__wrapper--tablet {
+      width: 1220px;
+    }
+
   }
 
   .form__container {
@@ -134,7 +139,7 @@
   .form__title {
     width: unset;
     margin: 0 auto;
-    margin-top: 74px;
+    margin-top: 111px;
     margin-bottom: 53px;
   }
 
@@ -157,6 +162,10 @@
 
   .form__body-description {
     margin-left: 82px;
+  }
+
+  .form__body .wrapper {
+    width: 1220px;
   }
 
 }

@@ -21,6 +21,10 @@
   margin-top: 28px;
 }
 
+.content__wrapper {
+  padding-top: 28px;
+}
+
 .content__title {
   color: #ffffff;
 }
@@ -44,14 +48,10 @@
   }
 }
 
-.content .wrapper {
-  width: 280px;
-  margin-top: 29px;
-
-}
 
 .content__picture {
   height: 270px;
+  margin-top: 29px;
 
   & img {
     width: 100%;
@@ -68,19 +68,16 @@
     align-items: flex-start;
   }
 
-  .content__container {
-    margin-top: 54px;
-
-    & .wrapper{
-      width: 68%;
-    }
-  }
 
   .content__title {
     width: 419px;
     color: @font-title;
     font-size: 60px;
     line-height: 60px;
+  }
+
+  .content__wrapper {
+    padding-top: 53px;
   }
 
   .content__discription {
@@ -112,13 +109,13 @@
   }
 
   .content__picture {
-    position: relative;
+    position: absolute;
     width: 709px !important;/*иначе не задать */
     height: 609px;
-    margin-top:-80px !important;/*иначе не задать */
     align-self: center;
     z-index: -1;
-    padding-left: 30px;
+    top: 225px;
+    left: 30px;
 
     & img {
       width: 100%;
@@ -133,20 +130,18 @@
   .content {
     flex-direction: row;
     flex-wrap: nowrap;
-    max-width: 1440px;
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     height: 696px;
     padding: 0;
     top: -118px;
-    background-image: url(../img/index-background-desktop@1x.jpg);
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: 50% 100%;
 
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+   /* @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/index-background-desktop@2x.jpg");
+    }*/
+
+    & .wrapper {
+      width: 1060px;
     }
 
   }
@@ -156,8 +151,7 @@
     flex-direction: row;
     width: 50%;
     margin: 0 left;
-    padding-left: 188px;
-    padding-top: 171px;
+    padding-top: 223px;
     z-index: 2;
   }
 
@@ -173,11 +167,8 @@
   }
 
   .content__picture {
-    padding-left: 0;
-    height: auto;
-    position: absolute;
-    top: 32%;
-    right: 12%;
+    top: 116px;
+    left: 384px;
   }
 
   .content__picture img {
