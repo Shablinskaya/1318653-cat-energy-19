@@ -19,7 +19,7 @@ body {
   margin: 0 auto;
   font-size: 14px;
   line-height: 21px;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: "Arial", sans-serif;
   color: @font;
   font-style: normal;
   background-color: @bg-color;
@@ -30,6 +30,7 @@ h1 {
   font-size: 36px;
   line-height: 36px;
   font-weight: normal;
+  font-family: "Oswald";
   margin: 0;
   padding: 0;
   color: @font-title;
@@ -43,16 +44,23 @@ h3 {
   font-weight: normal;
   line-height: 37px;
   color: @font-title;
+  font-family: "Oswald";
 }
 
 ul,
-p,
+p {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 h2 {
   margin: 0;
   padding: 0;
   list-style-type: none;
-
+  font-family: "Oswald";
 }
+
 
 p {
   font-family: Arial;
@@ -61,6 +69,7 @@ p {
 a {
   color: @font-title;
   text-decoration: none;
+  font-family: "Oswald";
 }
 
 /*img {

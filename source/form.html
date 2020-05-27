@@ -10,7 +10,7 @@
     <header class="header">
       <div class="header__container header__container--closed header__container--nojs">
         <div class="header__wrapper wrapper">
-          <a class="header__logo logo" href="#">
+          <a class="header__logo logo" href="index.html">
             <picture>
               <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -79,7 +79,7 @@
           </div>
       </div>
       <div class="form__body-contacts  contacts">
-        <div class="contacts__wrapper form__wrapper--tablet wrapper">
+        <div class="contacts__wrapper contacts__wrapper--tablet wrapper">
           <h2 class="contacts__title title">Контактные данные (владельца кота)</h2>
           <div class="contacts__container">
             <div class="contacts__field field">
@@ -104,13 +104,13 @@
         </div>
       </div>
       <div class="form__body-comments comments">
-        <div class="comments__wrapper form__wrapper--tablet wrapper">
+        <div class="comments__wrapper comments__wrapper--tablet wrapper">
           <h2 class="comments__title title">Комментарий</h2>
-          <input class="comments__field" bordercolor="rgba(205, 205, 205, 0.5)" type="text" placeholder="Расскажите обо всех повадках кота">
+          <textarea class="comments__field" name="comment" cols="100" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
       </div>
       <div class="form__body-more more">
-        <div class="more__wrapper form__wrapper--tablet wrapper">
+        <div class="more__wrapper more__wrapper--tablet wrapper">
           <h2 class="more__title title">Дополнительно</h2>
           <ul class="more__check">
             <li class="more__choise">
@@ -132,7 +132,7 @@
           </ul>
        </div>
       </div>
-      <div class="form__body-footer form__wrapper--tablet wrapper">
+      <div class="form__body-footer form__body-footer--tablet wrapper">
         <button class="form__body-btn btn" type="submit">Отправить заявку</button>
         <p class="form__body-description">* — Обязательные поля</p>
       </div>
@@ -142,7 +142,7 @@
       <div class="adress__adjust">
         <div class="wrapper">
           <div class="adress__point  point">
-            <h3 class="point__title">приглашаем к&nbspсотрудничеству дилеров!</h3>
+            <h3 class="point__title">приглашаем к&nbsp;сотрудничеству дилеров!</h3>
             <p class="point__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
           </div>
         </div>
@@ -180,7 +180,7 @@
               </a>
               <a class="social__link" href="#">
                 <svg class="social__icon social__icon--fb"  width="10" height="19">
-                  <use xlink:href="./img/sprite.svg#icon-facebook"></use> </svg>
+                  <use xlink:href="./img/sprite.svg#icon-fb"></use> </svg>
               </a>
             </section>
           </div>
@@ -189,7 +189,7 @@
           <div class="footer__wrapper footer__wrapper--tablet">
             <a class="academy__link" href="https://htmlacademy.ru/intensive/adaptive">
               <p class="academy__name">HTML Academy</p>
-              <svg class="academi__icon" width="27" height="34">
+              <svg class="academy__icon" width="27" height="34">
                 <use xlink:href="./img/sprite.svg#icon-htmlacademy"></use>
               </svg>
             </a>
